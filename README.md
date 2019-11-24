@@ -29,6 +29,10 @@ Yes! There will be no problem as long as the externally visible symbols we are u
 
 If there is a name clash, only 1 implementation will be called, but it may still run.
 
+----
+
+TODO - what about where those libraries depend on another shared library that clashes?
+
 ### Resources
 
 - https://github.com/vladimirvivien/go-cshared-examples
