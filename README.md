@@ -12,6 +12,7 @@ Bar Result: 2
 ```
 
 Change `BUILDMODE` in [Makefile](./Makefile) to `c-archive` to try making static libraries.
+(Linking will fail for static libraries due to redefinitions of the cgo runtime, etc).
 
 Can check what symbols are exported/externally visible like so:
 
@@ -32,6 +33,8 @@ If there is a name clash, only 1 implementation will be called, but it may still
 ----
 
 TODO - what about where those libraries depend on another shared library that clashes?
+
+What if they depend on calling their own functions internally, but they are externally visible and shadowed?
 
 ### Resources
 
